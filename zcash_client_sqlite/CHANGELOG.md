@@ -26,6 +26,10 @@ workspace.
 - `zewif::ZewifImportReport::addresses_never_exposed` counts transparent
   addresses recorded in a ZeWIF document that are not known to have been
   exposed, and which are therefore deliberately left unexposed on import.
+- A database migration adds `lock_expiry_height` columns to the
+  `sapling_received_notes`, `orchard_received_notes`, `ironwood_received_notes`,
+  and `transparent_received_outputs` tables to support explicit note locking
+  during concurrent proposal creation.
 
 ### Fixed
 - The `zewif` importer no longer marks transparent addresses that have no
